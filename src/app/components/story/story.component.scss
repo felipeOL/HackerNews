@@ -1,0 +1,45 @@
+
+
+.gallery{
+  margin: 4%;
+  display: grid;
+  gap: 1rem;
+  grid-auto-rows:auto;
+  grid-template-columns: repeat(auto-fill,minmax(min(100%,25rem), 1fr));
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover{
+  color:#ff6600;
+}
+
+.zoom{
+  transition:transform 0.3s;
+}
+
+.zoom:hover{
+  transform: scale(1.1);
+  z-index:3;
+}
+
+.shortText{
+  text-overflow: ellipsis;
+}
+
+::ng-deep .mat-paginator-container{
+  justify-content: center !important;
+}
+
+.spin{
+  display: flex;
+  justify-content: center;
+  margin: 5%;
+}
+
+.mat-progress-spinner , .mat-spinner{
+  stroke: red;
+}

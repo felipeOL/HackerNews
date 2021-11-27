@@ -1,0 +1,21 @@
+.error{
+  margin: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: auto;
+}
+
+.bigLetter{
+  font-size: 500%;
+  color: #ff6600;
+}
+
+body{
+  background-color: #f6f6ef;
+}

@@ -1,0 +1,22 @@
+<div class="spin" *ngIf="!loading">
+  <mat-spinner mode="indeterminate" color="accent"></mat-spinner>
+</div>
+
+<div *ngIf="loading">
+<ng-container *ngIf="storyList">
+  <div class="gallery">
+  <mat-card *ngFor="let story of storyList" class="zoom">
+    <mat-card-title>
+      <p class="shortText" *ngIf="story.type != 'story'">{{story.title}}</p>
+      <a href={{story.url}} *ngIf="story.type == 'story'">
+        <p class="shortText">{{story.title}}</p>
+      </a>
+    </mat-card-title>
+    <mat-card-content>
+      <p>{{ cardContent(story) }}</p>
+    </mat-card-content>
+  </mat-card>
+  </div>
+</ng-container>
+<mat-paginator [hidePageSize]="true" [length]="500" [pageSize]="50" (page)="pageHandler($event)" ></mat-paginator>
+</div>
